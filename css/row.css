@@ -1,0 +1,114 @@
+
+/*LEFT*/
+.arrow-left {
+    display: inline-block;
+    cursor: pointer;
+    height: 120px;
+    width: 80px;
+    position: relative;
+    margin: 20px;
+}
+.arrow-left-top, 
+.arrow-left-bottom {
+    background: #337AB7;
+    height: 10px;
+    left: -30px;
+    position: absolute;
+    top: 60px;
+    width: 100px;
+}
+.arrow-left-top {
+    top: 64px;
+}
+.arrow-left-top {
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+}
+.arrow-left-bottom {
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+.arrow-left-top::after, 
+.arrow-left-bottom::after {
+    background: #000;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.15s;
+}
+.arrow-left-top::after {
+    left: 0;
+    right: 100%;
+    transition-delay: 0s;
+}
+.arrow-left-bottom::after {
+    left: 100%;
+    right: 0;
+    transition-delay: 0.15s;
+}
+.arrow-left:hover .arrow-left-top::after {
+    right: 0;
+    transition-delay:  0.15s;
+}
+.arrow-left:hover .arrow-left-bottom::after {
+    left: 0;
+    transition-delay: 0s;
+}
+/*RIGHT*/
+.arrow-right {
+    display: inline-block;
+    cursor: pointer;
+    height: 120px;
+    width: 80px;
+    position: relative;
+    margin: 20px;
+}
+.arrow-right-top, 
+.arrow-right-bottom {
+    background: #337AB7;
+    height: 10px;
+    left: -30px;
+    position: absolute;
+    top: 60px;
+    width: 100px;
+}
+.arrow-right-top {
+    top: 64px;
+}
+.arrow-right-top {
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+}
+.arrow-right-bottom {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+.arrow-right-top::after, 
+.arrow-right-bottom::after {
+    background: #000;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.15s;
+}
+.arrow-right-top::after {
+    left: 100%;
+    right: 0;
+    transition-delay: 0s;
+}
+.arrow-right-bottom::after {
+    left: 0;
+    right: 100%;
+    transition-delay: 0.15s;
+}
+.arrow-right:hover .arrow-right-top::after {
+    left: 0;
+    transition-delay: 0.15s;
+}
+.arrow-right:hover .arrow-right-bottom::after {
+    right: 0;
+    transition-delay: 0s;
+}
